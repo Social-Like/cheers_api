@@ -1,0 +1,17 @@
+!!! 5
+%html
+  %head
+    %title
+      Cheers by CRIO
+    %meta{ :"http-equiv" => "Content-Type", :content => "text/html; charset=utf-8" }
+    = csrf_meta_tag
+    = stylesheet_link_tag 'application'
+    = javascript_include_tag 'application'
+  %body
+    .bg-header
+      .text-center.p10
+        = image_tag("logo-cheers.png", title: t("title"))
+    .bg-body
+      .container.bg-white
+        = draw_flash_messages
+        = yield

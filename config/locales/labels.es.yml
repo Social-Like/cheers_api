@@ -1,0 +1,45 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+es:
+  labels:
+    brand_add: Agregar marca
+    brand_remove: Remover marca
+    brand_select: "- Seleccione una marca -"
+    brand: Marca
+    brands: Marcas
+    cancel: Cancelar
+    categories: Categorías
+    categories_and_brands: Categorías y marcas
+    category: Categoría
+    category_created_successfully: Categoría creada satisfactoriamente
+    category_deleted_successfully: Categoría eliminada satisfactoriamente
+    category_edit: Editar categoría
+    category_new: Nueva categoría
+    category_select: "- Seleccione una categoría -"
+    category_updated_successfully: Categoría actualizada satisfactoriamente
+    confirm_deletion: ¿Realmente desea eliminar esta entrada?
+    countries: Países
+    country_created_successfully: País creado satisfactoriamente
+    country_deleted_successfully: País eliminado satisfactoriamente
+    country_edit: Editar país
+    country_new: Nuevo país
+    country_select: "- Todos los países -"
+    country_updated_successfully: País actualizado satisfactoriamente
+    delete: Eliminar
+    description: Descripción
+    edit: Editar
+    logout: Salir
+    name: Nombre
+    new: Nuevo
+    no_results_found: No se encontraron resultados
+    products: Productos
+    product_created_successfully: Producto creado satisfactoriamente
+    product_deleted_successfully: Producto eliminado satisfactoriamente
+    product_edit: Editar producto
+    product_new: Nuevo producto
+    product_updated_successfully: Producto actualizado satisfactoriamente
+    save: Guardar
+    sign_in: Ingresar
+    users: Usuarios
+  title: Cheers by CRIO

@@ -1,0 +1,15 @@
+= simple_nested_form_for(category, html: { class: "form-horizontal" }) do |f|
+  .form-inputs
+    = f.input :name, autofocus: true
+    = f.input :description, as: :text, required: false, input_html: { rows: 3, class: "input-block-level" }
+  .form-inputs
+    = field_set_tag t('labels.brands') do
+      = f.fields_for :brands do |ff|
+        = render partial: 'brand_form', locals: { f: ff }
+        
+      = f.link_to_add :brands, class: 'pull-right btn' do
+        = t('labels.brand_add')
+        %i.icon-plus-sign
+  .form-actions
+    = link_to t("labels.cancel"), categories_url, class: "btn"
+    = f.button :submit, t("labels.save"), class: "btn btn-primary"

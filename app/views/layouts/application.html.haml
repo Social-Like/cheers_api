@@ -1,0 +1,19 @@
+!!! 5
+%html
+  %head
+    %title
+      Cheers by CRIO
+    %meta{ :"http-equiv" => "Content-Type", :content => "text/html; charset=utf-8" }
+    = csrf_meta_tag
+    = stylesheet_link_tag 'application'
+    = javascript_include_tag 'application'
+  %body
+    = render "shared/main_menu"
+    .bg-body
+      .container.bg-white
+        .row
+          .span3
+            = render "shared/lateral_menu"
+          .span9
+            = yield
+    #modal

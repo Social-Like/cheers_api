@@ -1,0 +1,18 @@
+%ul.nav.nav-pills.nav-stacked#lateral-menu
+  %li{ class: controller_name == 'countries' ? 'active' : nil }
+    = link_to countries_url do
+      %i.icon-chevron-right
+      = t("labels.countries")
+  %li{ class: controller_name == 'categories' ? 'active' : nil }
+    = link_to categories_url do
+      %i.icon-chevron-right
+      = t("labels.categories_and_brands")
+  %li{ class: controller_name == 'products' ? 'active' : nil }
+    = link_to products_url do
+      %i.icon-chevron-right
+      = t("labels.products")
+  %li{ class: controller_name == 'members' ? 'active' : nil }
+    = link_to "#" do
+      %i.icon-chevron-right
+      = t("labels.users")
+

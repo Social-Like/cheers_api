@@ -1,0 +1,16 @@
+= simple_form_for(product, html: { class: "form-horizontal" }) do |f|
+  .form-inputs
+    = f.input :category_id, as: :select, collection: categories, include_blank: t('labels.category_select')
+    = f.input :brand_id, collection: categories, as: :grouped_select, group_method: :brands, include_blank: t('labels.brand_select')
+    = f.association :country, include_blank: t('labels.country_select')
+    = f.input :name, autofocus: true
+    = f.fields_for :picture do |ff|
+      = ff.input :asset
+    - if product.picture.valid?
+      .control-group
+        .controls
+          = image_tag(product.picture_list)
+    = f.input :description, as: :text, required: false, input_html: { rows: 3, class: "input-block-level" }
+  .form-actions
+    = link_to t("labels.cancel"), products_url, class: "btn"
+    = f.button :submit, t("labels.save"), class: "btn btn-primary"

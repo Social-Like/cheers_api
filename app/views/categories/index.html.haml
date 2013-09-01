@@ -1,0 +1,37 @@
+%h1
+  = t("labels.categories_and_brands")
+.clearfix    
+  = link_to t('labels.new'), url_for(action: :new), class: 'btn btn-primary pull-right'
+%br
+.errors
+  = draw_flash_messages
+- if categories.any?
+  %table.table.table-striped.table-hover
+    %thead
+      %tr
+        %th
+          = t('labels.name')
+        %th
+          = t('labels.description')
+        %th
+          = t('labels.brands')
+        %th{ colspan: 2 }
+  
+    %tbody
+      - categories.each do |category|
+        %tr
+          %td
+            = category.name
+          %td
+            = category.description
+          %td
+            = category.brand_names
+          %td{ width: 70 }            
+            = link_to t('labels.delete'), category_path(category), method: :delete, data: { confirm: t('labels.confirm_deletion') }, class: 'btn btn-small btn-danger'
+          %td{ width: 70 }
+            = link_to t('labels.edit'), edit_category_path(category), class: 'btn btn-small btn-primary'
+  .pull-right
+    = bootstrap_will_paginate categories
+- else
+  .alert.alert-info
+    = t 'labels.no_results_found'
