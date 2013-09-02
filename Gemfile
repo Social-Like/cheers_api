@@ -35,6 +35,10 @@ group :development do
   gem 'thin'
 end
 
+group :production do
+  gem 'unicorn'
+end
+
 gem 'jquery-rails'
 
 # To use ActiveModel has_secure_password
