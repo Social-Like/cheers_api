@@ -8,7 +8,6 @@ gem 'rails', '3.2.13'
 
 gem 'pg'
 gem 'heroku'
-gem 'thin'
 gem 'devise', '~> 2.2.3'
 gem 'haml', '~> 3.1.7'
 gem 'simple_form', '~> 2.0.4'
@@ -30,6 +29,10 @@ group :assets do
   # gem 'therubyracer', :platforms => :ruby
 
   gem 'uglifier', '>= 1.0.3'
+end
+
+group :development do
+  gem 'thin'
 end
 
 gem 'jquery-rails'
